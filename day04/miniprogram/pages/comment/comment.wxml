@@ -1,0 +1,45 @@
+<!--pages/comment/comment.wxml-->
+<!--引用元素-->
+<view>
+  <!--电影图片-->
+  <view class='detail-container' style='background:url({{detail.images.large}}) no-repeat top/cover'></view>
+  <view class='detail-mask'></view>
+  <!--电影介绍-->
+  <view class='detail-info'>
+    <image src='{{detail.images.large}}' class='detail-img'></image>
+    <view class='detail'>
+      <!--电影标题-->
+      <view class='detail-nm'>{{detail.title}}</view>
+      <!--电影源标题-->
+      <view class=''>{{detail.original_title}}</view>
+      <!--电影评分-->
+      <view class='detail-sc'>评分：{{detail.rating.average}}</view>
+      <!--右侧文字-国家-->
+      <view>{{detail.countries}}</view>
+      <!--电影导演-->
+      <view>导演：{{detail.directors[0].name}}</view>
+    </view>
+  </view>
+  <!--电影描述-->
+  <view class='desc'>简介：{{detail.summary}}</view>
+  <!--输入域 评价-->
+    <van-field value="{{content}}" placeholder="写一下评论吧..." bind:change='onContextChange'/>
+  <!--评分 vant-->
+  <van-rate
+  value='{{score}}'
+  icon="like"
+  void-icon="like-o"
+  bind:change='onScoreChange'
+  size='30'
+/>
+<text>\n</text>
+  <!--上传图片按钮 vant组件库--> 
+  <van-button type="primary" size="large" bindtap='uploadImg'>上传图片</van-button>
+  <!--图片列表-->
+  <view>
+    <image class='comment-img' wx:for='{{images}}' wx:key='{{index}}' src='{{item}}'></image>
+  </view>
+  <text>\n</text>
+  <!--提交评价-->
+  <van-button size='large' type='danger' bindtap='submit'>提交评论</van-button>
+</view>

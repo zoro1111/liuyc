@@ -1,0 +1,15 @@
+<!--pages/exam01/exam01.wxml-->
+<text>pages/exam01/exam01.wxml</text>
+<view>云开发--云数据库</view>
+<button bindtap='insert'>添加数据</button>
+<button bindtap='select'>查询数据</button>
+<view>云开发--云存储</view>
+<button bindtap='upload'>上传图片</button>
+<button>展示图片</button>
+
+<!--引入第三方组件库实现button样式-->
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>

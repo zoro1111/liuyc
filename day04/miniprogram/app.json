@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/mymovie/mymovie",
+    "pages/xzmap/xzmap",
+    "pages/profile/profile",
+    "pages/home/home",
+    "pages/comment/comment" 
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E54847", 
+    "navigationBarTitleText": "豆瓣影视",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "电影",
+      "iconPath": "images/film.png",
+      "selectedIconPath": "images/film-actived.png"
+    },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
+      },
+      {
+        "pagePath": "pages/xzmap/xzmap",
+        "text": "位置",
+        "iconPath": "images/position.png",
+        "selectedIconPath": "images/girl.png"
+      },
+      {
+        "pagePath": "pages/mymovie/mymovie",
+        "text": "我喜欢的",
+        "iconPath": "images/like.png",
+        "selectedIconPath": "images/love.png"
+      }
+    ]
+  }
+}
